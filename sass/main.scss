@@ -1,0 +1,146 @@
+@import "../sass/utils/variables";
+@import "../sass/components/header";
+@import "../sass/components/footer";
+@import "../sass/components/index-main";
+@import "../sass/components/modal";
+@import "../sass/components/portfolio-main";
+img {
+  vertical-align: top;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  padding-bottom: 50px;
+  margin: 0;
+
+  text-align: center;
+}
+
+.section {
+  padding: 94px 0;
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  color: $main-color;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.main-portfolio {
+  background-color: ($main-portfolio-color);
+}
+
+.container {
+  width: 100%;
+  /* max-width: 1200px; */
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.address {
+  width: 100%;
+  max-width: 307px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & a {
+    color: $gray-color;
+    font-size: 14px;
+    &:hover {
+      color: $hover-color;
+      fill: $hover-color;
+    }
+    & svg {
+      margin-right: 10px;
+      vertical-align: middle;
+      fill: currentColor;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  & li {
+    flex-direction: row;
+  }
+}
+
+.link-web {
+  position: relative;
+  text-decoration: none;
+  font-style: normal;
+  color: ($hover-color);
+  padding-bottom: 29px;
+}
+
+.webStudio {
+  padding-right: 93px;
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  .link {
+    color: ($hover-color);
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  width: 206px;
+  height: 44px;
+}
+
+.icon__button {
+  display: block;
+  background-color: ($white-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: ($border-color);
+  vertical-align: middle;
+  transition: color 0.25s, fill 0.25s,
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  .icon__button:hover & {
+    background-color: ($hover-color);
+    color: #ffffff;
+    fill: ($white-color);
+  }
+}

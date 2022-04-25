@@ -1,0 +1,144 @@
+.overlay {
+  padding: 200px;
+  @include flexer($direction:column,$content:center,$justify:center);
+
+  flex-wrap: wrap;
+  text-align: center;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 48, 58, 0.4);
+}
+
+.studio-central-block {
+  color: ($white-color);
+  background-image: url("../images/back-image.jpg");
+  max-width: 1600px;
+  margin: 0 auto;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 0 !important;
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    max-width: 696px;
+    width: 100%;
+
+    @include text-redactor(
+      $weight: 900,
+      $size: 44px,
+      $height: 1.36,
+      $spacing: 0.06em
+    );
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.button-index {
+  align-self: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  padding: 10px 0;
+
+  @include text-redactor($weight: 700);
+  color: ($white-color);
+
+  border-radius: 4px;
+  background: ($hover-color);
+}
+
+.studio-description {
+  ul {
+    @include flexer($direction:row,$justify:space-between);
+
+  }
+  h3 {
+    width: 270px;
+    margin: 10px 0;
+    @include text-redactor($weight: 700, $size: 14px, $height: 1.14);
+    text-transform: uppercase;
+  }
+  p {
+    width: 270px;
+    @include text-redactor($size: 14px, $height: 1.71);
+    color: ($gray-color);
+  }
+}
+.work-fotos {
+  padding-top: 0 !important;
+  li {
+    position: relative;
+  }
+  ul {
+    @include flexer($direction:row,$justify:center);
+    justify-content: space-between;
+  }
+}
+.work__index {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  @include text-redactor($weight: 700, $size: 14px, $height: 1.14);
+  color: ($white-color);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 27px 0;
+  background-color: ($semi-gray-color);
+}
+.top-figure-name {
+  @include text-redactor($size: 16px, $height: 1.18);
+  padding-bottom: 10px;
+}
+.studio-svg-decoration {
+  height: 120px;
+  width: 270px;
+  border-radius: 4px;
+  background-color: ($light-gray-color);
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  svg {
+    height: 70px;
+    width: 70px;
+  }
+}
+.team__cards {
+  background-color: ($light-gray-color);
+  ul {
+    @include flexer($direction:row,$justify:space-between);
+  }
+  figure {
+    margin: 0;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    border-radius: 0px 0px 4px 4px;
+    background-color: ($white-color);
+  }
+  figcaption {
+    padding: 30px 0;
+    @include flexer($direction:column,$items:center);
+  }
+}
+.companies {
+    @include flexer($direction:row,$justify:space-between);
+  div {
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    border: 1px solid ($border-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    fill: ($border-color);
+    transition: border-color 0.25s, fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    :hover {
+      border-color: ($hover-color);
+      fill: ($hover-color);
+    }
+  }
+  svg {
+    width: 106px;
+    height: 60px;
+  }
+}

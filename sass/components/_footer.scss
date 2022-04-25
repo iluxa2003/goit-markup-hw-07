@@ -1,0 +1,97 @@
+.footer__inner {
+  padding: 60px 0;
+
+  font-weight: 400;
+  color: #ffffff;
+
+  background: ($dark_gray-color);
+  li {
+    a {
+      color: ($r-g-b-a);
+    }
+  }
+}
+.footer_special {
+  @include flexer($items:flex-end,$justify:space-between);
+  width: 570px;
+  button {
+    height: 50px;
+    width: 200px;
+
+    @include text-redactor($weight: 700, $height: 30px);
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: ($white-color);
+    cursor: pointer;
+  }
+  svg {
+    fill: ($white-color);
+  }
+  span {
+    @include text-redactor($weight: 700, $height: 1.14px, $size: 14px);
+    text-transform: uppercase;
+    color: ($white-color);
+  }
+  label {
+    @include flexer($direction:column,$justify:space-between);
+
+    width: 358px;
+    height: 86px;
+  }
+  input {
+    width: 358px;
+    height: 50px;
+
+    @include text-redactor();
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: ($dark_gray-color);
+    padding: 15px 16px 15px 16px;
+  }
+}
+.footer__icons {
+  li {
+    padding-right: 10px;
+    :last-child {
+      padding: 0;
+    }
+  }
+  .icon__button {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .icon {
+    fill: ($white-color);
+  }
+}
+
+.right__block h5 {
+  @include text-redactor($weight: 700, $size: 14px, $height: 1.14);
+  text-transform: uppercase;
+
+  color: ($white-color);
+}
+.address__block {
+  @include text-redactor($size: 14px, $height: 1.14, $spacing: 0.02em);
+  a {
+    color: ($main-color);
+  }
+  p {
+    @include text-redactor($size: 14px, $height: 1.71);
+  }
+}
+.footer__info {
+  @include flexer($items:center,$justify:space-between);
+  display: flex;
+
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__icons .icon__button:hover,
+.icon__button:hover {
+  background-color: ($hover-color);
+}

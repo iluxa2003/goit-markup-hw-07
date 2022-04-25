@@ -1,0 +1,80 @@
+header {
+  border-bottom: 1px solid ($header-special);
+  .container {
+    @include flexer($direction: row, $items: center, $justify: space-between);
+    padding: 14px 0;
+    flex-wrap: wrap;
+  }
+  nav {
+    @include flexer();
+    ul {
+      width: 294px;
+      @include flexer($direction: row, $items: center, $justify: space-between);
+      flex-wrap: nowrap;
+      @include text-redactor(
+        $weight: 500,
+        $size: 14px,
+        $height: 1.14,
+        $spacing: 0.02
+      );
+      color: ($main-color);
+    }
+  }
+  .link {
+    :active:after {
+      opacity: none;
+      transition: none;
+    }
+    :after {
+      content: "";
+      @include flexer($display: block);
+      width: 100%;
+      height: 4px;
+
+      background-color: ($hover-color);
+      opacity: 0;
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      border-radius: 2px;
+
+      transition: opacity 0.1s linear;
+    }
+  }
+}
+
+.header-list a {
+  color: ($main-color);
+}
+.link {
+  position: relative;
+  text-decoration: none;
+  font-style: normal;
+  transition: color 0.25s, fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 29px;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $hover-color;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 2px;
+    transition: opacity 0.1s linear;
+  }
+  &:hover:after,
+  &.active:after {
+    opacity: 1;
+  }
+  &:active:after {
+    opacity: none;
+    transition: none;
+  }
+}
