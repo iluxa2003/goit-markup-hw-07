@@ -18,37 +18,40 @@
     <header>
       <div class="container">
         <nav>
-          <div class="webStudio">
+          <div class="header_webStudio">
             <a class="link-web" href="#">Web</a>Studio
           </div>
           <ul class="header-list">
             <li>
-              <a class="link active" href="index.html">Cтудия</a>
+              <a class="header-list__link active" href="index.html">Cтудия</a>
             </li>
             <li>
-              <a class="link" href="portfolio.html">Портфолио</a>
+              <a class="header-list__link" href="portfolio.html">Портфолио</a>
             </li>
             <li>
-              <a class="link" href="#">Контакты</a>
+              <a class="header-list__link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
 
-        <ul class="address">
+        <ul class="header_address">
           <li>
-            <a class="link" href="mailto:info@devstudio.com">
-              <svg height="12" width="16">
-                <use href="images/sprite2.svg#icon-envelope" height="12"></use>
+            <a class="addres__link" href="mailto:info@devstudio.com">
+              <svg height="12px" width="16px">
+                <use
+                  href="images/sprite2.svg#icon-envelope"
+                  height="12px"
+                ></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li>
-            <a class="link" href="tel:+380961111111">
-              <svg height="16" width="10">
+            <a class="addres__link" href="tel:+380961111111">
+              <svg height="16px" width="10px">
                 <use
                   href="images/sprite2.svg#icon-smartphone"
-                  height="16"
+                  height="16px"
                 ></use>
               </svg>
               +38 096 111 11 11
@@ -60,7 +63,7 @@
 
     <main>
       <section class="studio-central-block section">
-        <div class="overlay">
+        <div class="studio-central-block-overlay">
           <h1>Эффективные решения для вашего бизнеса</h1>
           <button data-modal-open class="button-index" type="button">
             Заказать услугу
@@ -72,7 +75,7 @@
         <div class="container">
           <ul>
             <li>
-              <div class="studio-svg-decoration">
+              <div class="studio-description-svg-decoration">
                 <svg>
                   <use
                     href="images/sprite2.svg#icon-antenna-1"
@@ -88,7 +91,7 @@
               </p>
             </li>
             <li>
-              <div class="studio-svg-decoration">
+              <div class="studio-description-svg-decoration">
                 <svg>
                   <use
                     href="images/sprite2.svg#icon-clock-1"
@@ -104,7 +107,7 @@
               </p>
             </li>
             <li>
-              <div class="studio-svg-decoration">
+              <div class="studio-description-svg-decoration">
                 <svg>
                   <use
                     href="images/sprite2.svg#icon-diagram-1"
@@ -120,7 +123,7 @@
               </p>
             </li>
             <li>
-              <div class="studio-svg-decoration">
+              <div class="studio-description-svg-decoration">
                 <svg>
                   <use
                     href="images/sprite2.svg#icon-astronaut-1"
@@ -148,7 +151,7 @@
                 alt="Tree_coding_foto"
                 width="370"
               />
-              <div class="work__index">Десктопные приложения</div>
+              <div class="work-fotos-index">Десктопные приложения</div>
             </li>
             <li>
               <img
@@ -156,7 +159,7 @@
                 alt="Work_place_foto"
                 width="370"
               />
-              <div class="work__index">Мобильные приложения</div>
+              <div class="work-fotos-index">Мобильные приложения</div>
             </li>
             <li>
               <img
@@ -164,12 +167,12 @@
                 alt="Cool_mozaika_foto"
                 width="370"
               />
-              <div class="work__index">Дизайнерские решения</div>
+              <div class="work-fotos-index">Дизайнерские решения</div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="team__cards section">
+      <section class="team-cards section">
         <div class="container">
           <h2>Наша команда</h2>
           <ul>
@@ -183,31 +186,31 @@
                 <figcaption>
                   <p class="top-figure-name">Игорь Демьяненко</p>
                   <p class="botton-figure-name">Product desiner</p>
-                  <ul class="social">
+                  <ul class="team_social">
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-Group "></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -222,31 +225,31 @@
                 <figcaption>
                   <p class="top-figure-name">Ольга Репина</p>
                   <p class="botton-figure-name">Frontend developer</p>
-                  <ul class="social">
+                  <ul class="team_social">
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-Group "></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -261,31 +264,31 @@
                 <figcaption>
                   <p class="top-figure-name">Николай Тарасов</p>
                   <p class="botton-figure-name">Marketing</p>
-                  <ul class="social">
+                  <ul class="team_social">
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-Group "></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -300,31 +303,31 @@
                 <figcaption>
                   <p class="top-figure-name">Михаил Ермаков</p>
                   <p class="botton-figure-name">UI designer</p>
-                  <ul class="social">
+                  <ul class="team_social">
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-Group "></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
                     <li>
-                      <button class="icon__button" type="button">
-                        <svg class="icon">
+                      <button class="team_social-icon__button" type="button">
+                        <svg class="team-cards_icon">
                           <use href="images/sprite2.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -410,56 +413,56 @@
         </div>
       </section>
     </main>
-    <footer class="footer__inner">
+    <footer class="footer-inner">
       <div class="container">
-        <div class="footer__info">
-          <div class="left__bloc">
-            <div class="webStudio">
+        <div class="footer-inner-info">
+          <div class="footer-inner-info-left-bloc">
+            <div class="footer-inner_webStudio">
               <a href="#" class="link-web">Web</a>Studio
             </div>
-            <address class="address address__block" id="contacts">
+            <address class="footer-inner_address" id="contacts">
               <ul>
                 <li>
                   <p>г. Киев, пр-т Леси Украинки, 26</p>
                 </li>
                 <li>
-                  <a class="link" href="mailto:info@example.com"
+                  <a href="mailto:info@example.com"
                     >info@example.com</a
                   >
                 </li>
                 <li>
-                  <a class="link" href="tel:+380991111111">+38 099 111 11 11</a>
+                  <a href="tel:+380991111111">+38 099 111 11 11</a>
                 </li>
               </ul>
             </address>
           </div>
-          <div class="right__block">
+          <div class="footer-inner-info-right-block">
             <h5>Присоеденяйтесь</h5>
-            <div class="footer__icons">
+            <div class="footer-inner-info-right-block-icons">
               <ul class="social">
                 <li>
-                  <button class="icon__button" type="button">
+                  <button class="social-icon__button" type="button">
                     <svg class="icon">
                       <use href="images/sprite2.svg#icon-instagram"></use>
                     </svg>
                   </button>
                 </li>
                 <li>
-                  <button class="icon__button" type="button">
+                  <button class="social-icon__button" type="button">
                     <svg class="icon">
                       <use href="images/sprite2.svg#icon-Group "></use>
                     </svg>
                   </button>
                 </li>
                 <li>
-                  <button class="icon__button" type="button">
+                  <button class="social-icon__button" type="button">
                     <svg class="icon">
                       <use href="images/sprite2.svg#icon-facebook"></use>
                     </svg>
                   </button>
                 </li>
                 <li>
-                  <button class="icon__button" type="button">
+                  <button class="social-icon__button" type="button">
                     <svg class="icon">
                       <use href="images/sprite2.svg#icon-linkedin"></use>
                     </svg>
@@ -485,62 +488,62 @@
     </footer>
     <div data-modal class="is-hidden backdrop">
       <div class="modal">
-        <button data-modal-close class="close-botton" type="button">
+        <button data-modal-close class="modal_close-botton" type="button">
           <svg width="11" height="11">
             <use width="11" height="11" href="images/sprite2.svg#icon-x"></use>
           </svg>
         </button>
         <h3>Оставьте свои данные, мы вам перезвоним</h3>
         <form
-          class="sign__form"
+          class="sign-form"
           name="signup_form"
           autocomplete="on"
           novalidate
         >
-          <label for="name_input"> Имя </label>
-          <div class="name_wrap">
+          <label for="sign-form_name_input"> Имя </label>
+          <div class="sign-form_person_wrap">
             <input
               type="text"
               name="username"
               class="name__input"
-              id="name_input"
+              id="sign-form_name_input"
             />
-            <svg class="person icon form__icon">
+            <svg class="sign-form_person icon form__icon">
               <use href="images/sprite2.svg#modal-person"></use>
             </svg>
           </div>
           <label for="tel_input"> Телефон </label>
-          <div class="tel_wrap">
+          <div class="sign-form_phone_wrap">
             <input type="tel" name="tel" id="tel_input" />
-            <svg class="phone icon form__icon">
+            <svg class="sign-form_phone icon form__icon">
               <use href="images/sprite2.svg#modal-phone"></use>
             </svg>
           </div>
           <label for="email_input"> Почта </label>
-          <div class="email_wrap">
+          <div class="sign-form_envelop_wrap">
             <input type="email" name="email" id="email_input" />
-            <svg class="envelop icon form__icon">
+            <svg class="sign-form_envelop icon form__icon">
               <use href="images/sprite2.svg#modal-envelope"></use>
             </svg>
           </div>
-          <label for="comment__area"> Комментарий </label>
+          <label for="sign-form_comment-area"> Комментарий </label>
           <textarea
-            name="comment__area"
-            id="comment__area"
+            name="sign-form_comment-area"
+            id="sign-form_comment-area"
             placeholder="Введите текст"
           ></textarea>
 
-          <div class="checkmate">
+          <div class="sign-form_check-policy">
             <label for="check">
               <input id="check" type="checkbox" name="agree" />
-              <span class="check_icon"></span>
+              <span class="sign-form_check-icon"></span>
               <span
                 >Соглашаюсь с рассылкой и принимаю
                 <a href="#">Условия договора</a></span
               >
             </label>
           </div>
-          <button class="button-index form__btn" type="submit">
+          <button class="sign-form_button" type="submit">
             Отправить
           </button>
         </form>
