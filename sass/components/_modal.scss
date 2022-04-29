@@ -24,7 +24,7 @@
   background-color: #ffffff;
   position: relative;
 
-  & .close-botton {
+  &_close-botton {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -60,7 +60,7 @@
   }
 }
 // form
-.sign__form {
+.sign-form {
   @include flexer($display: flex, $content: center, $direction: column);
   width: 448px;
 
@@ -95,49 +95,52 @@
       border-color: ($hover-color);
     }
   }
-  .name_wrap:focus-within .person,
-  .tel_wrap:focus-within .phone,
-  .email_wrap:focus-within .envelop {
-    fill: ($hover-color) !important;
-  }
-  .person {
+  &_person {
     padding: 3px;
     top: 104px;
     left: 53px;
+    &_wrap:focus-within &{
+      fill: ($hover-color) !important;
+    }
   }
-  .phone {
+  &_phone {
     padding: 2.5px;
     top: 172px;
     left: 53px;
+    &_wrap:focus-within &{
+      fill: ($hover-color) !important;
+    }
   }
-  .envelop {
+  &_envelop {
     padding: 3px 1.5px;
     top: 240px;
     left: 53px;
-  }
-  #comment__area {
-    width: 448px;
-    height: 120px;
-    margin-bottom: 20px;
-    padding: 11px 15px;
-    resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-    &:focus-within {
-      outline: none;
-      border-color: ($hover-color);
+    &_wrap:focus-within &{
+      fill: ($hover-color) !important;
     }
   }
+  
 }
-// Checkmate
 
-.checkmate {
+#sign-form_comment-area {
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 11px 15px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus-within {
+    outline: none;
+    border-color: ($hover-color);
+  }
+}
+
+// sign-form_check-policy
+.sign-form_check-policy {
   align-self: center;
   width: 423px;
-  & input {
-    width: auto;
-  }
   & label {
     width: 100%;
     @include flexer($justify: space-around, $items: center);
@@ -154,6 +157,7 @@
     color: ($hover-color);
   }
   & input {
+    width: auto;
     margin: 0;
     -webkit-appearance: none;
     appearance: none;
@@ -161,6 +165,7 @@
     position: absolute;
   }
 }
+
 // icons
 .form__icon {
   position: absolute;
@@ -169,14 +174,14 @@
   width: 18px;
   vertical-align: middle;
 }
-.check_icon {
+.sign-form_check-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
   border: 2px solid $main-color;
   border-radius: 2px;
 }
-#check:checked + .check_icon {
+#check:checked + .sign-form_check-icon {
   border-color: $hover-color;
   background-color: ($hover-color);
   background-image: url(../images/icon_check.svg);
@@ -184,6 +189,17 @@
   background-origin: border-box;
 }
 // button
-.form__btn {
+.sign-form_button {
+  align-self: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  padding: 10px 0;
+
+  @include text-redactor($weight: 700);
+  color: ($white-color);
+
+  border-radius: 4px;
+  background: ($hover-color);
   margin-bottom: 30px;
 }

@@ -1,7 +1,7 @@
 // buttons
 .buttons-portfolio {
   @include flexer($justify:center);
-    & .buttons {
+    & .buttons-potfolio__buttons {
       cursor: pointer;
       /*height: 38px; 7 px difference*/
       margin: 0px 4px 50px 4px;
@@ -40,7 +40,7 @@
         1px 4px 6px rgba(0, 0, 0, 0.16);
       cursor: pointer;
       transform: none;
-      .special-overlay {
+      .galery__special-overlay {
         transform: none;
       }
     }
@@ -56,11 +56,11 @@
       padding: 20px 24px;
         border: 1px solid #eeeeee;
         border-top: none;
-        .portfolio-list-card__caption {
+        .galery__portfolio__card__caption {
             @include text-redactor($style:normal, $weight:700, $size:18px, $family:"Roboto", $height:2,$spacing:0.06em);
           }
           
-          .portfolio-list-card__descr {
+          .galery__portfolio__card__descr {
             @include text-redactor($style:normal, $size:16px, $family:"Roboto", $height:1.88,$spacing:0.03em);
             color: $gray-color;
           }
@@ -68,7 +68,7 @@
   }
 //   overlay
 
-  .special-overlay {
+  .galery__special-overlay {
     @include text-redactor($style:normal, $weight:400, $size:18px, $family:"Roboto", $height:1.56,$spacing:0.03em);
 
     

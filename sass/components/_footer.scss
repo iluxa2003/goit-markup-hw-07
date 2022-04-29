@@ -1,4 +1,4 @@
-.footer__inner {
+.footer-inner {
   padding: 60px 0;
 
   font-weight: 400;
@@ -12,7 +12,7 @@
   }
 }
 .footer_special {
-  @include flexer($items:flex-end,$justify:space-between);
+  @include flexer($items: flex-end, $justify: space-between);
   width: 570px;
   button {
     height: 50px;
@@ -34,7 +34,7 @@
     color: ($white-color);
   }
   label {
-    @include flexer($direction:column,$justify:space-between);
+    @include flexer($direction: column, $justify: space-between);
 
     width: 358px;
     height: 86px;
@@ -53,45 +53,86 @@
     padding: 15px 16px 15px 16px;
   }
 }
-.footer__icons {
+.footer-inner-info-right-block-icons {
   li {
     padding-right: 10px;
     :last-child {
       padding: 0;
     }
   }
-  .icon__button {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
   .icon {
     fill: ($white-color);
   }
 }
+.social {
+  display: flex;
+  flex-direction: row;
+  width: 206px;
+  height: 44px;
+  &-icon__button {
+    display: block;
+    background-color: ($white-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background-color: ($hover-color);
+    }
+  }
+}
 
-.right__block h5 {
+.footer-inner-info-right-block h5 {
   @include text-redactor($weight: 700, $size: 14px, $height: 1.14);
   text-transform: uppercase;
 
   color: ($white-color);
 }
-.address__block {
-  @include text-redactor($size: 14px, $height: 1.14, $spacing: 0.02em);
-  a {
-    color: ($main-color);
+.footer-inner_webStudio {
+  padding-right: 93px;
+  @include text-redactor($weight: 700, $size: 26px, $height: 2,$family:"Raleway");
+
+}
+.footer-inner_address {
+  width: 100%;
+  max-width: 333px;
+  justify-content: space-between;
+  @include flexer( $justify: space-between);
+  @include text-redactor($weight:500,$size: 14px, $height: 1.14, $spacing: 0.02em);
+  & a {
+    color: $gray-color;
+    font-size: 14px;
+    &:hover {
+      color: $hover-color;
+      fill: $hover-color;
+    }
+    & svg {
+      margin-right: 10px;
+      vertical-align: middle;
+      fill: currentColor;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  & li {
+    flex-direction: row;
   }
   p {
     @include text-redactor($size: 14px, $height: 1.71);
   }
 }
-.footer__info {
-  @include flexer($items:center,$justify:space-between);
+.footer-inner-info {
+  @include flexer($items: center, $justify: space-between);
   display: flex;
 
   width: 100%;
   align-items: center;
   justify-content: space-between;
 }
-.footer__icons .icon__button:hover,
+
+
 .icon__button:hover {
   background-color: ($hover-color);
 }

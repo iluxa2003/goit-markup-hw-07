@@ -20,7 +20,7 @@ header {
       color: ($main-color);
     }
   }
-  .link {
+  .header-list__link {
     :active:after {
       opacity: none;
       transition: none;
@@ -48,7 +48,7 @@ header {
 .header-list a {
   color: ($main-color);
 }
-.link {
+.header-list__link {
   position: relative;
   text-decoration: none;
   font-style: normal;
@@ -77,4 +77,8 @@ header {
     opacity: none;
     transition: none;
   }
+}
+.header_webStudio {
+  padding-right: 93px;
+  @include text-redactor($weight: 700, $size: 26px, $height: 2,$family:"Raleway");
 }
