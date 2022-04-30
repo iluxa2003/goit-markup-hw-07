@@ -60,44 +60,14 @@ body {
   background-color: ($main-portfolio-color);
 }
 
-.container {
+.main-container {
   width: 100%;
   /* max-width: 1200px; */
   width: 1200px;
   margin: 0 auto;
 }
 
-.header_address {
-  width: 100%;
-  max-width: 333px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 
-  & a {
-    color: $gray-color;
-    font-size: 14px;
-    &:hover {
-      color: $hover-color;
-      fill: $hover-color;
-    }
-    & svg {
-      margin-right: 10px;
-      vertical-align: middle;
-      fill: currentColor;
-    }
-    &::after {
-      display: none;
-    }
-  }
-  & li {
-    flex-direction: row;
-  }
-}
 
 .link-web {
   position: relative;
@@ -108,20 +78,4 @@ body {
 }
 
 
-.icon__button {
-  display: block;
-  background-color: ($white-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: ($border-color);
-  vertical-align: middle;
-  transition: color 0.25s, fill 0.25s,
-    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}

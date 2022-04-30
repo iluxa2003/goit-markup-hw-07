@@ -1,21 +1,18 @@
-.footer-inner {
+.footer-info{
   padding: 60px 0;
 
   font-weight: 400;
   color: #ffffff;
 
   background: ($dark_gray-color);
-  li {
-    a {
-      color: ($r-g-b-a);
-    }
-  }
+
 }
-.footer_special {
+.footer-info_right-block {
   @include flexer($items: flex-end, $justify: space-between);
   width: 570px;
-  button {
-    height: 50px;
+}
+.footer-info__button{
+  height: 50px;
     width: 200px;
 
     @include text-redactor($weight: 700, $height: 30px);
@@ -24,106 +21,91 @@
     border-radius: 4px;
     color: ($white-color);
     cursor: pointer;
-  }
-  svg {
-    fill: ($white-color);
-  }
-  span {
-    @include text-redactor($weight: 700, $height: 1.14px, $size: 14px);
-    text-transform: uppercase;
-    color: ($white-color);
-  }
-  label {
-    @include flexer($direction: column, $justify: space-between);
-
+}
+.footer-info_label{
+  @include flexer($direction: column, $justify: space-between);
     width: 358px;
     height: 86px;
-  }
-  input {
-    width: 358px;
-    height: 50px;
-
-    @include text-redactor();
-
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: ($dark_gray-color);
-    padding: 15px 16px 15px 16px;
-  }
 }
-.footer-inner-info-right-block-icons {
-  li {
-    padding-right: 10px;
-    :last-child {
-      padding: 0;
-    }
-  }
-  .icon {
-    fill: ($white-color);
-  }
-}
-.social {
-  display: flex;
-  flex-direction: row;
-  width: 206px;
-  height: 44px;
-  &-icon__button {
-    display: block;
-    background-color: ($white-color);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: rgba(255, 255, 255, 0.1);
-    &:hover {
-      background-color: ($hover-color);
-    }
-  }
-}
-
-.footer-inner-info-right-block h5 {
-  @include text-redactor($weight: 700, $size: 14px, $height: 1.14);
+.footer-info__text-block{
+  @include text-redactor($weight: 700, $size: 14px, $height: 1.14px);
   text-transform: uppercase;
 
   color: ($white-color);
 }
-.footer-inner_webStudio {
+.footer-info__input{
+  width: 358px;
+  height: 50px;
+
+  @include text-redactor();
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: ($dark_gray-color);
+  padding: 15px 16px 15px 16px;
+}
+
+.footer-info__list-component{
+  padding-right: 10px;
+  :last-child {
+    padding: 0;
+  }
+}
+
+.footer-info__social-list {
+  display: flex;
+  flex-direction: row;
+  width: 206px;
+  height: 44px;
+  
+}
+.footer-info__icon-button {
+  display: block;
+  background-color: ($white-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(255, 255, 255, 0.1);
+  &:hover {
+    background-color: ($hover-color);
+  }
+}
+
+
+
+.footer-info__webStudio {
   padding-right: 93px;
   @include text-redactor($weight: 700, $size: 26px, $height: 2,$family:"Raleway");
 
 }
-.footer-inner_address {
+.footer-info_address {
   width: 100%;
   max-width: 333px;
   justify-content: space-between;
   @include flexer( $justify: space-between);
   @include text-redactor($weight:500,$size: 14px, $height: 1.14, $spacing: 0.02em);
-  & a {
-    color: $gray-color;
+}
+.footer-info_address-textbox{
+  @include text-redactor($size: 14px, $height: 1.71);
+}
+.footer-info_address-textbox{
+  flex-direction: row;
+}
+.footer-info_address-link{
     font-size: 14px;
+    color: ($r-g-b-a);
     &:hover {
       color: $hover-color;
       fill: $hover-color;
     }
-    & svg {
-      margin-right: 10px;
-      vertical-align: middle;
-      fill: currentColor;
-    }
     &::after {
       display: none;
     }
-  }
-  & li {
-    flex-direction: row;
-  }
-  p {
-    @include text-redactor($size: 14px, $height: 1.71);
-  }
 }
-.footer-inner-info {
+.footer-info__container {
   @include flexer($items: center, $justify: space-between);
   display: flex;
 
@@ -132,6 +114,14 @@
   justify-content: space-between;
 }
 
+.footer-info__icon {
+  width: 20px;
+  height: 20px;
+  fill: ($white-color);
+  vertical-align: middle;
+  transition: color 0.25s, fill 0.25s,
+    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .icon__button:hover {
   background-color: ($hover-color);

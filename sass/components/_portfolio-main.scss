@@ -1,7 +1,7 @@
-// buttons
 .buttons-portfolio {
   @include flexer($justify:center);
-    & .buttons-potfolio__buttons {
+}
+  .buttons-potfolio__buttons {
       cursor: pointer;
       /*height: 38px; 7 px difference*/
       margin: 0px 4px 50px 4px;
@@ -21,18 +21,19 @@
         background: $hover-color;
       }
     }
-  }
+  
 
 //   galery
 .galery ul {
   @include flexer($items:center,$direction:row,$justify:space-between,);
-  
+
     flex-wrap: wrap;
-    li {
+}
+    .galery li {
       box-sizing: border-box;
       margin-bottom: 30px;
     }
-  }
+  
   .galery figure {
     transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
@@ -44,28 +45,30 @@
         transform: none;
       }
     }
+  }
 
-    & div {
+    .galery div {
       position: relative;
       width: 370px;
       height: 294px;
       overflow: hidden;
 
     }
-    & figcaption {
+    .galery figcaption {
       padding: 20px 24px;
         border: 1px solid #eeeeee;
         border-top: none;
-        .galery__portfolio__card__caption {
+    }
+        .galery__card__caption {
             @include text-redactor($style:normal, $weight:700, $size:18px, $family:"Roboto", $height:2,$spacing:0.06em);
           }
           
-          .galery__portfolio__card__descr {
+          .galery__card__descr {
             @include text-redactor($style:normal, $size:16px, $family:"Roboto", $height:1.88,$spacing:0.03em);
             color: $gray-color;
           }
-    }
-  }
+    
+  
 //   overlay
 
   .galery__special-overlay {
@@ -83,4 +86,3 @@
     transition: transform 250ms ease;
     background-color: rgba(33, 150, 243, 0.9);
   }
-  

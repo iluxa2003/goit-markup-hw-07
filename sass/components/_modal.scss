@@ -11,6 +11,25 @@
   visibility: hidden;
   opacity: 0.5;
 }
+.modal_close-botton {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  &:hover {
+    fill: ($hover-color);
+  }
+  &:active .modal {
+    opacity: 0;
+  }
+}
 .modal {
   @include flexer($display: flex, $items: center, $direction: column);
   transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -23,105 +42,82 @@
 
   background-color: #ffffff;
   position: relative;
-
-  &_close-botton {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 8px;
-    right: 8px;
-
-    cursor: pointer;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    border-radius: 50%;
-    &:hover {
-      fill: ($hover-color);
-    }
-    &:active .modal {
-      opacity: 0;
-    }
-  }
-  & h3 {
-    @include text-redactor(
-      $style: normal,
-      $weight: 700,
-      $size: 20px,
-      $family: "Roboto",
-      $height: 1.15,
-      $spacing: 0.03em
-    );
-
-    margin: 0;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 12px;
-  }
 }
 // form
-.sign-form {
+.modal_text {
+  @include text-redactor(
+    $style: normal,
+    $weight: 700,
+    $size: 20px,
+    $family: "Roboto",
+    $height: 1.15,
+    $spacing: 0.03em
+  );
+
+  margin: 0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+.modal_sign-form {
   @include flexer($display: flex, $content: center, $direction: column);
   width: 448px;
-
-  & label {
-    @include text-redactor(
-      $style: normal,
-      $weight: 400,
-      $size: 12px,
-      $family: "Roboto",
-      $height: 1.16,
-      $spacing: 0.01em
-    );
-
-    margin-bottom: 4px;
-    color: ($gray-color);
+}
+.sign-form_check-text {
+  color: ($gray-color);
+}
+.sign-form_usual-input {
+  padding: 0;
+  margin-bottom: 10px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  padding-left: 42px;
+  &:focus-within {
+    outline: none;
+    border-color: ($hover-color);
   }
-
-  & span {
-    color: ($gray-color);
+}
+.sign-form_envelop {
+  padding: 3px 1.5px;
+  top: 240px;
+  left: 53px;
+  &-wrap:focus-within & {
+    fill: ($hover-color) !important;
   }
-  & input {
-    padding: 0;
-    margin-bottom: 10px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-    width: 100%;
-    padding-left: 42px;
-    &:focus-within {
-      outline: none;
-      border-color: ($hover-color);
-    }
+}
+.sign-form_phone {
+  padding: 2.5px;
+  top: 172px;
+  left: 53px;
+  &-wrap:focus-within & {
+    fill: ($hover-color) !important;
   }
-  &_person {
-    padding: 3px;
-    top: 104px;
-    left: 53px;
-    &_wrap:focus-within &{
-      fill: ($hover-color) !important;
-    }
+}
+.sign-form_person {
+  padding: 3px;
+  top: 104px;
+  left: 53px;
+  &-wrap:focus-within & {
+    fill: ($hover-color) !important;
   }
-  &_phone {
-    padding: 2.5px;
-    top: 172px;
-    left: 53px;
-    &_wrap:focus-within &{
-      fill: ($hover-color) !important;
-    }
-  }
-  &_envelop {
-    padding: 3px 1.5px;
-    top: 240px;
-    left: 53px;
-    &_wrap:focus-within &{
-      fill: ($hover-color) !important;
-    }
-  }
-  
 }
 
+.sign-form_label {
+  @include text-redactor(
+    $style: normal,
+    $weight: 400,
+    $size: 12px,
+    $family: "Roboto",
+    $height: 1.16,
+    $spacing: 0.01em
+  );
+
+  margin-bottom: 4px;
+  color: ($gray-color);
+}
 #sign-form_comment-area {
   width: 448px;
   height: 120px;
@@ -138,36 +134,35 @@
 }
 
 // sign-form_check-policy
+.sign-form_check-input {
+  width: auto;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  position: absolute;
+}
+.sign-form_check-label {
+  width: 100%;
+  @include flexer($justify: space-around, $items: center);
+  padding-bottom: 30px;
+  @include text-redactor(
+    $weight: 400,
+    $size: 14px,
+    $family: "Roboto",
+    $height: 1.71,
+    $spacing: 0
+  );
+}
 .sign-form_check-policy {
   align-self: center;
   width: 423px;
-  & label {
-    width: 100%;
-    @include flexer($justify: space-around, $items: center);
-    padding-bottom: 30px;
-    @include text-redactor(
-      $weight: 400,
-      $size: 14px,
-      $family: "Roboto",
-      $height: 1.71,
-      $spacing: 0
-    );
-  }
-  & a {
-    color: ($hover-color);
-  }
-  & input {
-    width: auto;
-    margin: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    position: absolute;
-  }
 }
-
+.sign-form_check-link {
+  color: ($hover-color);
+}
 // icons
-.form__icon {
+.sign-form__icon {
   position: absolute;
   fill: $main-color !important; //821 556
   height: 18px;
